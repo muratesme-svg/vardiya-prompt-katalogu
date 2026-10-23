@@ -1,0 +1,16 @@
+# Role and Objective
+
+# Instructions
+
+## Sub-categories for more detailed instructions
+
+# Reasoning Steps
+
+# Output Format
+
+# Examples
+## Example 1
+
+# Context
+
+# Final instructions and prompt to think step by step

@@ -1,0 +1,21 @@
+What is the topic for a given news headline? \n
+- business \n
+- entertainment \n
+- health \n
+- sports \n
+- technology \n\n
+
+Text: Pixel 7 Pro Expert Hands On Review. \n
+The answer is: technology \n
+
+Text: Quit smoking? \n
+The answer is: health \n
+
+Text: Birdies or bogeys? Top 5 tips to hit under par \n
+The answer is: sports \n
+
+Text: Relief from local minimum-wage hike looking more remote \n
+The answer is: business \n
+
+Text: You won't guess who just arrived in Bari, Italy for the movie premiere. \n
+The answer is:

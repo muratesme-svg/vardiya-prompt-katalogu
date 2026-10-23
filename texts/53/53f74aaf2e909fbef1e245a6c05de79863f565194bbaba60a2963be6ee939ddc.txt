@@ -1,0 +1,7 @@
+Extract cities from text, include country they are in.
+    USER: I visited Mexico City and Poznan last year
+    MODEL: {"Mexico City": "Mexico", "Poznan": "Poland"}
+    USER: She wanted to visit Lviv, Monaco and Maputo
+    MODEL: {"Minsk": "Ukraine", "Monaco": "Monaco", "Maputo": "Mozambique"}
+    USER: I am currently in Austin, but I will be moving to Lisbon soon
+    MODEL:

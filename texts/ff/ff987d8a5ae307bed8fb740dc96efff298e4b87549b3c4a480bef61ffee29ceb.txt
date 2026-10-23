@@ -1,0 +1,10 @@
+Decide whether a Tweet's sentiment is positive, neutral, or negative.
+
+Tweet: I loved the new YouTube video you made!
+Sentiment: positive
+
+Tweet: That was awful. Super boring 😠
+Sentiment: negative
+
+Tweet: Something surprised me about this video - it was actually original. It was not the same old recycled stuff that I always see. Watch it - you will not regret it.
+Sentiment:

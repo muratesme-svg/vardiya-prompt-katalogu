@@ -1,0 +1,132 @@
+{
+  "search_queries": [
+    "prompt engineering language:Markdown",
+    "LLM prompt library language:Markdown",
+    "system prompts language:Markdown",
+    "AI agent prompts language:Markdown",
+    "awesome prompts language:Markdown",
+    "prompt templates language:Markdown",
+    "yapay zeka prompt şablonları language:Markdown",
+    "KI Prompt Vorlagen language:Markdown",
+    "modèles de prompts IA language:Markdown",
+    "plantillas de prompts IA language:Markdown",
+    "modelos de prompt IA language:Markdown",
+    "提示词 模板 language:Markdown",
+    "قوالب مطالبات الذكاء الاصطناعي language:Markdown",
+    "промпты шаблоны language:Markdown",
+    "プロンプト テンプレート language:Markdown",
+    "프롬프트 템플릿 language:Markdown",
+    "prompt e modelli language:Markdown",
+    "prompt sjablonen language:Markdown"
+  ],
+  "official_sources": [
+    {
+      "publisher": "OpenAI",
+      "model": "gpt",
+      "category": "prompt",
+      "title": "OpenAI · Prompt engineering guide",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+      "summary_tr": "OpenAI'nin prompt tasarımı ve model yönergeleri için resmî rehberi.",
+      "summary_en": "Official OpenAI prompt engineering guide."
+    },
+    {
+      "publisher": "Anthropic",
+      "model": "claude",
+      "category": "prompt",
+      "title": "Anthropic · Prompt engineering overview",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables",
+      "summary_tr": "Claude prompt tasarımı ve ilgili resmî yönergeler.",
+      "summary_en": "Official Anthropic prompt engineering overview."
+    },
+    {
+      "publisher": "Google",
+      "model": "gemini",
+      "category": "prompt",
+      "title": "Google Gemini · Prompt design strategies",
+      "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+      "summary_tr": "Gemini modelleri için resmî prompt tasarımı rehberi.",
+      "summary_en": "Official Gemini prompt design strategies."
+    },
+    {
+      "publisher": "Mistral AI",
+      "model": "mistral",
+      "category": "prompt",
+      "title": "Mistral · Prompting",
+      "url": "https://docs.mistral.ai/inference/prompting",
+      "summary_tr": "Mistral modelleri için sistem/user mesajları, yapılandırma ve örnekler.",
+      "summary_en": "Official Mistral prompting documentation."
+    },
+    {
+      "publisher": "DeepSeek",
+      "model": "deepseek",
+      "category": "prompt",
+      "title": "DeepSeek · Prompt library",
+      "url": "https://api-docs.deepseek.com/prompt-library/",
+      "summary_tr": "DeepSeek'in resmî prompt örnekleri ve görev türleri.",
+      "summary_en": "Official DeepSeek prompt examples."
+    },
+    {
+      "publisher": "Qwen",
+      "model": "qwen",
+      "category": "ajan",
+      "title": "Qwen · Chat templates, control tokens and tool use",
+      "url": "https://qwen.readthedocs.io/en/latest/getting_started/concepts.html",
+      "summary_tr": "Qwen'in resmî sohbet biçimleri, yönerge rolleri ve araç kullanımı açıklaması.",
+      "summary_en": "Official Qwen guidance on chat templates, control tokens, system prompts, and tool use."
+    },
+    {
+      "publisher": "Moonshot AI",
+      "model": "genel",
+      "category": "prompt",
+      "title": "Kimi · Best practices for prompts",
+      "url": "https://platform.moonshot.ai/docs/guide/prompt-best-practice",
+      "summary_tr": "Kimi'nin açık yönerge, bağlam, ayraç, örnek ve uzun konuşma özeti önerileri.",
+      "summary_en": "Official Kimi recommendations for clarity, context, delimiters, examples, and long-dialog summaries."
+    },
+    {
+      "publisher": "Cohere",
+      "model": "genel",
+      "category": "arastirma",
+      "title": "Cohere · Prompt engineering resources",
+      "url": "https://docs.cohere.com/v1/docs/cohere-faqs",
+      "summary_tr": "Cohere'nin prompt mühendisliği temel/ileri rehberlerine ve RAG kaynaklarına bağlantı veren resmî sayfa.",
+      "summary_en": "Official Cohere page linking to prompt-engineering basics, advanced techniques, and RAG resources."
+    },
+    {
+      "publisher": "Qwen Team",
+      "model": "qwen",
+      "category": "prompt",
+      "title": "Qwen · Official documentation",
+      "url": "https://qwen.readthedocs.io/en/latest/",
+      "summary_tr": "Qwen modelleri, şablonları ve kullanım yönergeleri için resmî dokümantasyon.",
+      "summary_en": "Official Qwen model documentation and prompt templates."
+    },
+    {
+      "publisher": "GitHub",
+      "model": "genel",
+      "category": "ajan",
+      "title": "GitHub Copilot · Prompt engineering",
+      "url": "https://docs.github.com/en/copilot/concepts/prompting/prompt-engineering",
+      "summary_tr": "GitHub Copilot için resmî prompt mühendisliği yönergeleri.",
+      "summary_en": "Official GitHub Copilot prompt engineering guide."
+    },
+    {
+      "publisher": "xAI",
+      "model": "genel",
+      "category": "gorsel",
+      "title": "xAI · Image prompting guide",
+      "url": "https://docs.x.ai/developers/model-capabilities/images/prompting-guide",
+      "summary_tr": "Grok Imagine için resmî görsel prompt rehberi ve istek seçenekleri.",
+      "summary_en": "Official image prompting guide and request options for Grok Imagine."
+    },
+    {
+      "publisher": "Meta",
+      "model": "genel",
+      "category": "prompt",
+      "title": "Meta Llama · Documentation",
+      "url": "https://www.llama.com/docs/",
+      "summary_tr": "Llama modelleri ve kullanımına ilişkin resmî dokümantasyon.",
+      "summary_en": "Official Meta Llama documentation."
+    }
+  ]
+}

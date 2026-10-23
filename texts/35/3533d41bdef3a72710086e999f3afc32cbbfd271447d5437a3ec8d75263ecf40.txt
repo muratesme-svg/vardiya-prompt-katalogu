@@ -1,0 +1,4 @@
+Write a title for this text, give me five options:
+Whether helping physicians identify disease or finding photos of "hugs," AI is behind a lot of the work we do at Google. And at our Arts & Culture Lab in Paris, we've been experimenting with how AI can be used for the benefit of culture.
+Today, we're sharing our latest experiments—prototypes that build on seven years of work in partnership the 1,500 cultural institutions around the world.
+Each of these experimental applications runs AI algorithms in the background to let you unearth cultural connections hidden in archives—and even find artworks that match your home decor."

@@ -1,0 +1,13 @@
+<extraction_spec>
+You will extract structured data from tables/PDFs/emails into JSON.
+
+- Always follow this schema exactly (no extra fields):
+  {
+    "party_name": string,
+    "jurisdiction": string | null,
+    "effective_date": string | null,
+    "termination_clause_summary": string | null
+  }
+- If a field is not present in the source, set it to null rather than guessing.
+- Before returning, quickly re-scan the source for any missed fields and correct omissions.
+</extraction_spec>

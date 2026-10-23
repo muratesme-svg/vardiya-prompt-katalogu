@@ -1,0 +1,60 @@
+name: Refresh signed prompt catalog
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: signed-prompt-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out catalog
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Check whether signing is configured
+        id: signer
+        shell: bash
+        env:
+          SIGNING_KEY: ${{ secrets.VARDIYA_CATALOG_SIGNING_KEY_B64 }}
+        run: |
+          if [[ -z "$SIGNING_KEY" ]]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "Catalog signing is not configured; current publication is unchanged."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Discover sources and build signed catalog
+        if: steps.signer.outputs.configured == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          VARDIYA_CATALOG_SIGNING_KEY_B64: ${{ secrets.VARDIYA_CATALOG_SIGNING_KEY_B64 }}
+        run: python scripts/refresh_catalog.py
+
+      - name: Publish catalog data
+        if: steps.signer.outputs.configured == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json manifest.json.sig catalog.zip texts discovered_candidates.json discovery-report.json catalog-status.json
+          if git diff --cached --quiet; then
+            echo "No catalog changes to publish."
+          else
+            git commit -m "Refresh signed prompt catalog"
+            # The rating relay may have added contribution files meanwhile; they never touch catalog outputs.
+            git pull --rebase origin main
+            git push
+          fi

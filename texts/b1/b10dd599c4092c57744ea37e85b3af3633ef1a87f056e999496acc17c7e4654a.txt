@@ -1,0 +1,8 @@
+<design_system_enforcement>
+- Tokens-first: Do not hard-code colors (hex/hsl/oklch/rgb) in JSX/CSS. All colors must come from globals.css variables (e.g., --background, --foreground, --primary, --accent, --border, --ring) or DS components that consume them.
+- Introducing a brand or accent? Before styling, add/extend tokens in globals.css under :root and .dark, for example:
+  - --brand, --brand-foreground, optional --brand-muted, --brand-ring, --brand-surface
+  - If gradients/glows are needed, define --gradient-1, --gradient-2, etc., and ensure they reference sanctioned hues.
+- Consumption: Use Tailwind/CSS utilities wired to tokens (e.g., bg-[hsl(var(--primary))], text-[hsl(var(--foreground))], ring-[hsl(var(--ring))]). Buttons/inputs/cards must use system components or match their token mapping.
+- Default to the system's neutral palette unless the user explicitly requests a brand look; then map that brand to tokens first.
+</design_system_enforcement>

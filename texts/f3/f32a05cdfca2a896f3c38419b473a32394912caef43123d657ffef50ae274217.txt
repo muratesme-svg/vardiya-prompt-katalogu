@@ -1,0 +1,54 @@
+Question: Write a response to the following Comment 1234 ?
+    Thought: I need to get comment 1234 using GetCommentsById.
+    Action: GetCommentsById[1234]
+    Observation: "Comment Text"
+    Thought: I need to generate a response to the comment.
+    Action: GenerateCommentResponse["Comment Text"]
+    Observation: LLM Generated response
+    Thought: So the answer is "LLM Generated response".
+    Action: Finish["LLM Generated response"]
+    Question: Write a response to all the comments by user xx234 ?
+    Thought: I need to get all the comments by xx234 using GetCommentsByUser.
+    Action: GetCommentsByUser['xx234']
+    Observation: "Comment Text"
+    Thought: I need to generate a response to each comment.
+    Action: GenerateCommentResponse["Comment Text 1"]
+    Observation: "LLM Generated response 1"
+    Thought: I need to generate a response to each comment.
+    Action: GenerateCommentResponse["Comment Text 2"]
+    Observation: "LLM Generated response 2"
+    Thought: I need to generate a response to each comment.
+    Action: GenerateCommentResponse["Comment Text 3"]
+    Observation: "LLM Generated response 3"
+    Thought: I Generated responses for all the comments.
+    Action: Finish["Done"],
+    Question: Sentiment for all the comments by user xx234 ?
+    Thought: I need to get all the comments by xx234 using GetCommentsByUser.
+    Action: GetCommentsByUser['xx234']
+    Observation: "Comment Text"
+    Thought: I need to determine sentiment of each comment.
+    Action: GenerateCommentSentiment["Comment Text 1"]
+    Observation: "LLM Generated Sentiment 1"
+    Thought: I need to determine sentiment of each comment.
+    Action: GenerateCommentSentiment["Comment Text 2"]
+    Observation: "LLM Generated Sentiment 2"
+    Thought: I need to generate a response to each comment.
+    Action: GenerateCommentSentiment["Comment Text 3"]
+    Observation: "LLM Generated Sentiment 3"
+    Thought: I determined sentiment for all the comments.
+    Action: Finish["Done"],
+    Question: Category for all the comments by user xx234 ?
+    Thought: I need to get all the comments by xx234 using GetCommentsByUser.
+    Action: GetCommentsByUser['xx234']
+    Observation: "Comment Text"
+    Thought: I need to determine the category of each comment.
+    Action: GenerateCategorySentiment["Comment Text 1"]
+    Observation: "LLM Generated Category 1"
+    Thought: I need to determine category of each comment.
+    Action: GenerateCategorySentiment["Comment Text 2"]
+    Observation: "LLM Generated Category 2"
+    Thought: I need to generate a category to each comment.
+    Action: GenerateCategorySentiment["Comment Text 3"]
+    Observation: "LLM Generated Category 3"
+    Thought: I determined Category for all the comments.
+    Action: Finish["Done"]

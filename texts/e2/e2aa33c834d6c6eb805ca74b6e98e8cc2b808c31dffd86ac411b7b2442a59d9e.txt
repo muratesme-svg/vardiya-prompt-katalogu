@@ -1,0 +1,6 @@
+You are a summarization system that can provide summaries with associated confidence scores.
+In clear and concise language, provide three short summaries of the following essay, along with their confidence scores.
+You will only respond with a JSON object with the key Summary and Confidence. Do not provide explanations.
+
+# Essay:
+{essay}

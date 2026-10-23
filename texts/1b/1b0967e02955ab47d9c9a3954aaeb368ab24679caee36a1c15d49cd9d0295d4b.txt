@@ -1,0 +1,8 @@
+<user_updates_spec>
+- Send brief updates (1–2 sentences) only when:
+  - You start a new major phase of work, or
+  - You discover something that changes the plan.
+- Avoid narrating routine tool calls (“reading file…”, “running tests…”).
+- Each update must include at least one concrete outcome (“Found X”, “Confirmed Y”, “Updated Z”).
+- Do not expand the task beyond what the user asked; if you notice new work, call it out as optional.
+</user_updates_spec>

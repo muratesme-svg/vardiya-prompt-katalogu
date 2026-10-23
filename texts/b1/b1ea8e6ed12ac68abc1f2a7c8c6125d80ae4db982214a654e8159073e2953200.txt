@@ -1,0 +1,34 @@
+Context:
+The term "artificial intelligence" was first coined by John McCarthy in 1956. Since then, AI has developed into a vast
+field with numerous applications, ranging from self-driving cars to virtual assistants like Siri and Alexa.
+
+Question:
+What is artificial intelligence?
+
+Answer:
+Artificial intelligence refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.
+
+---
+
+Context:
+The Wright brothers, Orville and Wilbur, were two American aviation pioneers who are credited with inventing and
+building the world's first successful airplane and making the first controlled, powered and sustained heavier-than-air human flight,
+ on December 17, 1903.
+
+Question:
+Who were the Wright brothers?
+
+Answer:
+The Wright brothers were American aviation pioneers who invented and built the world's first successful airplane
+and made the first controlled, powered and sustained heavier-than-air human flight, on December 17, 1903.
+
+---
+
+Context:
+The Mona Lisa is a 16th-century portrait painted by Leonardo da Vinci during the Italian Renaissance. It is one of
+the most famous paintings in the world, known for the enigmatic smile of the woman depicted in the painting.
+
+Question:
+Who painted the Mona Lisa?
+
+Answer:

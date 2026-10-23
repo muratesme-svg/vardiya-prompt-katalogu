@@ -1,0 +1,24 @@
+You previously analyzed this system prompt and its failure modes.
+
+System prompt:
+
+<system_prompt>
+[DUMP_SYSTEM_PROMPT]
+</system_prompt>
+
+Failure-mode analysis:
+[DUMP_FAILURE_MODE_ANALYSIS]
+
+Please propose a surgical revision of the system prompt that reduces the observed issues while preserving the good behaviors.
+
+Constraints:
+
+- Do not redesign the agent from scratch.
+- Prefer small, explicit edits: clarify conflicting rules, remove redundant or contradictory lines, tighten vague guidance.
+- Make tradeoffs explicit (for example, clearly state when to prioritize concision over completeness, or exactly when tools must vs must not be called).
+- Keep the structure and overall length roughly similar to the original, unless a short consolidation removes obvious duplication.
+
+Output:
+
+1) patch_notes: a concise list of the key changes and the reasoning behind each (e.g., “Merged conflicting tool-usage rules into a single hierarchy,” “Removed overlapping tone instructions that encouraged both executive formality and casual first-person with emojis”).
+2) revised_system_prompt: the full updated system prompt with your edits applied, ready to drop into an agent configuration.

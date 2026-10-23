@@ -1,0 +1,10 @@
+[Document Context Start]
+Part 1: The 'Flirble' is a small, blue creature.
+...
+[Long gap in text]
+...
+Part 10: Flirbles are known to fly only at night.
+[Document Context End]
+
+Based on the entire document above, provide a comprehensive answer. Synthesize all relevant information from the text that pertains to the question's scenario.
+Question: Describe the characteristics of a Flirble.

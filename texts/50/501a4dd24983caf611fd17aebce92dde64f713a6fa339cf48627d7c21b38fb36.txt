@@ -1,0 +1,5 @@
+Given a JSON entry of a data source, output a JSON with the following fields and explain the reasoning:
+pii: True/False, the dataset contains Personally Identifiable Information.
+age: How many years since the dataset was last modified.
+keywords: New keywords to index this dataset under, beyond the current set of keywords.
+The last text output should be the JSON.

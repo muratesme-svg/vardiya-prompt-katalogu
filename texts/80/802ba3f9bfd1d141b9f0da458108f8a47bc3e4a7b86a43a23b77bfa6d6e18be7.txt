@@ -1,0 +1,7 @@
+You are given an essay text and need to provide summaries and evaluate them.
+
+# Essay:
+{essay}
+
+Step 1: In this step, provide three short summaries of the given essay. Each summary should be clear, concise, and capture the key points of the speech. Aim for around 2-3 sentences for each summary.
+Step 2: Evaluate the three summaries from Step 1 and rate which one you believe is the best. Explain your choice by pointing out specific reasons such as clarity, completeness, and relevance to the speech content.

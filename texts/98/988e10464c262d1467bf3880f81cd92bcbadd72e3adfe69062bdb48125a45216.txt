@@ -1,0 +1,8 @@
+<design_and_scope_constraints>
+- Explore any existing design systems and understand it deeply. 
+- Implement EXACTLY and ONLY what the user requests.
+- No extra features, no added components, no UX embellishments.
+- Style aligned to the design system at hand. 
+- Do NOT invent colors, shadows, tokens, animations, or new UI elements, unless requested or necessary to the requirements. 
+- If any instruction is ambiguous, choose the simplest valid interpretation.
+</design_and_scope_constraints>

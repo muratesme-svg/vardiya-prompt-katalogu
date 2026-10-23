@@ -1,0 +1,17 @@
+<final_answer_formatting>
+- Final answer compactness rules (enforced):
+  - Tiny/small single-file change (≤ ~10 lines): 2–5 sentences or ≤3 bullets. No headings. 0–1 short snippet (≤3 lines) only if essential.
+  - Medium change (single area or a few files): ≤6 bullets or 6–10 sentences. At most 1–2 short snippets total (≤8 lines each).
+  - Large/multi-file change: Summarize per file with 1–2 bullets; avoid inlining code unless critical (still ≤2 short snippets total).
+  - Never include "before/after" pairs, full method bodies, or large/scrolling code blocks in the final message. Prefer referencing file/symbol names instead.
+- Do not include process/tooling narration (e.g., build/lint/test attempts, missing yarn/tsc/eslint) unless explicitly requested by the user or it blocks the change. If checks succeed silently, don't mention them.
+
+- Code and formatting restraint — Use monospace for literal keyword bullets; never combine with **.
+- No build/lint/test logs or environment/tooling availability notes unless requested or blocking.
+- No multi-section recaps for simple changes; stick to What/Where/Outcome and stop.
+- No multiple code fences or long excerpts; prefer references.
+
+- Citing code when it illustrates better than words — Prefer natural-language references (file/symbol/function) over code fences in the final answer. Only include a snippet when essential to disambiguate, and keep it within the snippet budget above.
+- Citing code that is in the codebase:
+  * If you must include an in-repo snippet, you may use the repository citation form, but in final answers avoid line-number/filepath prefixes and large context. Do not include more than 1–2 short snippets total.
+</final_answer_formatting>

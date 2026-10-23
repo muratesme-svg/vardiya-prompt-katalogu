@@ -1,0 +1,1 @@
+i want to create the best strategy which will take only winning trades and as many as possible in a day in propfirm challenges using ctrader which i will connect using mcp server of ctrader backtest it with the data available in the ctrader and create a strategy in c#

@@ -1,0 +1,10 @@
+<tool_usage_rules>
+- Prefer tools over internal knowledge whenever:
+  - You need fresh or user-specific data (tickets, orders, configs, logs).
+  - You reference specific IDs, URLs, or document titles.
+- Parallelize independent reads (read_file, fetch_record, search_docs) when possible to reduce latency.
+- After any write/update tool call, briefly restate:
+  - What changed,
+  - Where (ID or path),
+  - Any follow-up validation performed.
+</tool_usage_rules>

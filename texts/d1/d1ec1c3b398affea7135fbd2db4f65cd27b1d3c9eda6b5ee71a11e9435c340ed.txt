@@ -1,0 +1,41 @@
+Answer the question using the text below. Respond with only the text provided.
+Question: What should I do to fix my disconnected WiFi? The light on my Google WiFi router is yellow and blinking slowly.
+
+Text:
+Color: No light
+What it means: Router has no power or the light was dimmed in the app.
+What to do:
+Check that the power cable is properly connected to your router and to a working wall outlet.
+If your device is already set up and the light appears off, check your light brightness settings in the app.
+If there's still no light, contact WiFi customer support.
+
+Color: Solid white, no light, solid white
+What it means: Device is booting up.
+What to do:
+Wait for the device to boot up. This takes about a minute. When it's done, it will slowly pulse white, letting you know it's ready for setup.
+
+Color: Slow-pulsing white
+What it means: Device is ready for set up.
+What to do:
+Use the Google Home app to set up your router.
+
+Color: Solid white
+What it means: Router is online and all is well.
+What to do:
+You're online. Enjoy!
+
+Color: Slowly pulsing yellow
+What it means: There is a network error.
+What to do:
+Check that the Ethernet cable is connected to both your router and your modem and both devices are turned on. You might need to unplug and plug in each device again.
+
+Color: Fast blinking yellow
+What it means: You are holding down the reset button and are factory resetting this device.
+What to do:
+If you keep holding down the reset button, after about 12 seconds, the light will turn solid yellow. Once it is solid yellow, let go of the factory reset button.
+
+Color: Solid yellow
+What it means: Router is factory resetting.
+What to do:
+This can take up to 10 minutes. When it's done, the device will reset itself and start pulsing white, letting you know it's ready for setup.
+Image Solid red light Solid red Something is wrong. Critical failure. Factory reset the router. If the light stays red, contact WiFi customer support.

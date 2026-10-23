@@ -1,0 +1,12 @@
+You are an expert prompt engineer. Rewrite the **Original Prompt** below to prevent the specific failure described in the **Bad Response** and **Feedback**. The new prompt should address the constraints and logic gaps that caused the error.
+
+**Original Prompt:**
+[Insert Prompt]
+
+**Bad Response:**
+[Insert Bad Response]
+
+**Feedback:**
+[Insert Feedback]
+
+**Output:** Provide only the optimized prompt with the changes that were made.

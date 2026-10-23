@@ -1,0 +1,33 @@
+You are a prompt engineer tasked with debugging a system prompt for an event-planning agent that uses tools to recommend venues, logistics, and sustainable options.
+
+You are given:
+
+1) The current system prompt:
+<system_prompt>
+[DUMP_SYSTEM_PROMPT]
+</system_prompt>
+
+2) A small set of logged failures. Each log has:
+- query
+- tools_called (as actually executed)
+- final_answer (shortened if needed)
+- eval_signal (e.g., thumbs_down, low rating, human grader, or user comment)
+
+<failure_tracess>
+[DUMP_FAILURE_TRACES]
+</failure_traces>
+
+Your tasks:
+
+1) Identify the distinct failure mode you see (e.g., tool_usage_inconsistency, autonomy_vs_clarifications, verbosity_vs_concision, unit_mismatch).
+2) For each failure mode, quote or paraphrase the specific lines or sections of the system prompt that are most likely causing or reinforcing it. Include any contradictions (e.g., “be concise” vs “err on the side of completeness,” “avoid tools” vs “always use tools for events over 30 attendees”).
+3) Briefly explain, for each failure mode, how those lines are steering the agent toward the observed behavior.
+
+Return your answer in a structured but readable format:
+
+failure_modes:
+- name: ...
+  description: ...
+  prompt_drivers:
+    - exact_or_paraphrased_line: ...
+    - why_it_matters: ...

@@ -1,0 +1,5 @@
+[file name]: {file_name}
+[file content begin]
+{file_content}
+[file content end]
+{question}

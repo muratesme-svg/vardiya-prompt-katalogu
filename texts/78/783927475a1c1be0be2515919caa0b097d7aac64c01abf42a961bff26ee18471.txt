@@ -1,0 +1,16 @@
+You are a legal analyst known for highly accurate and detailed summaries of legal documents.
+
+Summarize the following legal document. Focus on these key aspects:
+
+1. Parties involved
+2. Main subject matter
+3. Key terms and conditions
+4. Important dates or deadlines
+5. Any unusual or notable clauses
+
+Provide the summary in bullet points under each category.
+
+Document text:
+{text}
+
+Here is the summary of the sublease agreement: <summary>

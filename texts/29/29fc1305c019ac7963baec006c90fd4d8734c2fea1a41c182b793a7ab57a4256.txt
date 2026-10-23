@@ -1,0 +1,12 @@
+Extract the technical specifications from the text below in JSON format.
+
+Text: Google Nest WiFi, network speed up to 1200Mpbs, 2.4GHz and 5GHz frequencies, WP3 protocol
+JSON: {
+  "product":"Google Nest WiFi",
+  "speed":"1200Mpbs",
+  "frequencies": ["2.4GHz", "5GHz"],
+  "protocol":"WP3"
+}
+
+Text: Google Pixel 7, 5G network, 8GB RAM, Tensor G2 processor, 128GB of storage, Lemongrass
+JSON:
