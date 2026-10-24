@@ -1,1 +1,6 @@
-{"version":"2026.10.23.1","count":3097,"discovered":0,"built_at":"2026-10-23T18:34:50Z","note":"Initial signed snapshot; scheduled discovery has not yet run."}
+{
+  "built_at": "2026-10-24T16:56:25Z",
+  "count": 3114,
+  "discovered": 3,
+  "version": "2026.10.24.3"
+}

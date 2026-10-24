@@ -1,1 +1,13 @@
-{"state":"initial_snapshot","note":"No automatic source scan has run yet.","checked_at":"2026-10-23T18:34:50Z"}
+{
+  "checked_at": "2026-10-24T16:56:25+00:00",
+  "errors": [],
+  "queries": [
+    "system prompts language:Markdown",
+    "AI agent prompts language:Markdown",
+    "awesome prompts language:Markdown"
+  ],
+  "records_updated": 3,
+  "repositories_found": 2,
+  "repositories_scanned": 2,
+  "truncated_repositories": []
+}

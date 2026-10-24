@@ -1,0 +1,227 @@
+{
+  "discovered-327b852c7287e12a656a2801": {
+    "aciklama": "alexey-max-fedorov/gaia-ai deposundaki prompts/update.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from alexey-max-fedorov/gaia-ai/prompts/update.md. Check the source and redistribution status.",
+    "ad": "Update",
+    "categories": [
+      "genel",
+      "kod",
+      "inceleme",
+      "ozet",
+      "gorsel"
+    ],
+    "description": "alexey-max-fedorov/gaia-ai deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "kod",
+    "kaynak": {
+      "adres": "https://github.com/alexey-max-fedorov/gaia-ai/blob/master/prompts/update.md",
+      "depo": "alexey-max-fedorov/gaia-ai",
+      "lisans": "bilinmiyor",
+      "tarih": "2026-10-22",
+      "yazar": "alexey-max-fedorov",
+      "yol": "prompts/update.md"
+    },
+    "kaynak_adi": "alexey-max-fedorov",
+    "kimlik": "discovered-327b852c7287e12a656a2801",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-10-22",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "kod",
+      "inceleme",
+      "ozet",
+      "gorsel"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Tam metin otomatik yayımlanmadı; kaynağı açıp incele."
+    ]
+  },
+  "discovered-54bb6c894fbc511dee380c9a": {
+    "aciklama": "alexey-max-fedorov/gaia-ai deposundaki prompts/doctor.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from alexey-max-fedorov/gaia-ai/prompts/doctor.md. Check the source and redistribution status.",
+    "ad": "Doctor",
+    "categories": [
+      "genel",
+      "kod",
+      "veri",
+      "gorsel"
+    ],
+    "description": "alexey-max-fedorov/gaia-ai deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "kod",
+    "kaynak": {
+      "adres": "https://github.com/alexey-max-fedorov/gaia-ai/blob/master/prompts/doctor.md",
+      "depo": "alexey-max-fedorov/gaia-ai",
+      "lisans": "bilinmiyor",
+      "tarih": "2026-10-22",
+      "yazar": "alexey-max-fedorov",
+      "yol": "prompts/doctor.md"
+    },
+    "kaynak_adi": "alexey-max-fedorov",
+    "kimlik": "discovered-54bb6c894fbc511dee380c9a",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-10-22",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "kod",
+      "veri",
+      "gorsel"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Tam metin otomatik yayımlanmadı; kaynağı açıp incele."
+    ]
+  },
+  "discovered-dc8bdc8e28e761af660eeab9": {
+    "aciklama": "magiruuvelvet/llm-prompts deposundaki tools/claude-prompt-engineer.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from magiruuvelvet/llm-prompts/tools/claude-prompt-engineer.md. Check the source and redistribution status.",
+    "ad": "Claude Prompt Engineer",
+    "categories": [
+      "genel",
+      "ozet",
+      "yazi",
+      "ogrenme",
+      "gorsel",
+      "ajan"
+    ],
+    "description": "magiruuvelvet/llm-prompts deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "ozet",
+    "kaynak": {
+      "adres": "https://github.com/magiruuvelvet/llm-prompts/blob/master/tools/claude-prompt-engineer.md",
+      "depo": "magiruuvelvet/llm-prompts",
+      "lisans": "bilinmiyor",
+      "tarih": "2026-09-30",
+      "yazar": "magiruuvelvet",
+      "yol": "tools/claude-prompt-engineer.md"
+    },
+    "kaynak_adi": "magiruuvelvet",
+    "kimlik": "discovered-dc8bdc8e28e761af660eeab9",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "claude",
+    "model_families": [
+      "claude"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-09-30",
+        "family": "claude",
+        "model_id": null,
+        "model_version": null,
+        "provider": "claude",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "ozet",
+      "yazi",
+      "ogrenme",
+      "gorsel",
+      "ajan"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Tam metin otomatik yayımlanmadı; kaynağı açıp incele."
+    ]
+  }
+}
