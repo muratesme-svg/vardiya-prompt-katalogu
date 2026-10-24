@@ -18,6 +18,17 @@ EXE açılıp okunabilir). Bu yüzden anahtar yalnızca bu küçük aktarıcıda
 - Dosya adı katkı anahtarıdır: aynı katkı yeniden gönderilirse dosya güncellenir, sayım artmaz.
 - Kişisel veri ya da gizli bilgi gibi görünen açıklamalar yayın adımında manifeste konmaz (puan sayılır).
 
+## Dil sürümü adayları (`POST /v1/variants`)
+
+Aynı aktarıcı, kullanıcının onayladığı dil sürümü adaylarını da alır ve `variants/<katalog-kimliği>/<dil>/<anahtar>.json`
+olarak yazar. **Aday yayımlanmaz:** yalnızca depo sahibinin `variants/approved.json` listesine eklediği ve metin özeti
+tutan adaylar günlük workflow'la imzalı manifeste girer (bkz. `variants/README.md`).
+
+- İkinci kilit: API anahtarı, parola, e-posta, telefon ya da kullanıcı adı içeren yol benzeri metin reddedilir
+  (uygulama bunu zaten göndermeden önce durdurur; yayın adımı üçüncü kez denetler).
+- Paket katı biçimde doğrulanır (16 izinli alan; en çok 20.000 karakter metin; amaç, tür ve risk kodları listeden).
+- Bu yol eklendiği için aktarıcının yeniden yayına alınması gerekir: bu klasörde `npx wrangler deploy`.
+
 ## Kurulum (depo sahibi yapar; yaklaşık 15 dakika)
 
 1. **GitHub anahtarı:** GitHub → Settings → Developer settings → Fine-grained tokens → yeni anahtar.

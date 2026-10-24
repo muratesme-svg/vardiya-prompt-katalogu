@@ -45,6 +45,20 @@ Apps keep ratings on the device. Users may send a contribution (anonymous or wit
 after reviewing every field. Contributions go through `relay/` into `contributions/`; the daily workflow
 summarizes them into the signed manifest's `ratings` field. Re-sent ratings are not double-counted.
 
+## Dil sürümleri / Language versions
+
+Kullanıcılar bir prompt'un kendi dillerindeki sürümünü (çeviri ya da uyarlama) hazırlayıp isterse **aday** olarak
+paylaşabilir. Aslı hiç değişmez. Uygulama paylaşımdan önce lisansı (türev paylaşımına izin veriyor mu), gizli bilgiyi
+(anahtar, parola, e-posta, telefon, kullanıcı adlı yol) ve otomatik denetim işaretlerini denetler. Adaylar
+`relay/` üzerinden `variants/` klasörüne yazılır. **Yayına yalnızca depo sahibinin `variants/approved.json`
+listesine metin özetiyle eklediği adaylar girer**; puan yayın kararı vermez. Onaylı sürümler imzalı manifestte kaydın
+`variants` alanında (metin satır içinde) bulunur; eski uygulamalar bu alanı yok sayar. Uygulamalar indirirken
+gizli bilgi taramasını yeniden yapar ve aslında olmayan riskli satırlar için suçlamasız uyarı gösterir.
+
+Users may share a language version of a prompt as a **candidate**. Nothing is published unless the repository owner
+lists it with its text hash in `variants/approved.json`. Approved versions appear inline in the signed manifest's
+`variants` field; older apps ignore the field.
+
 ## Görünürlük / Visibility
 
 EXE ve APK varsayılan olarak **Orta** düzeyi kullanır. **Yok** tüm kayıtları gösterir; **Düşük** yalnızca aşırı/kritik risk etiketlileri gizler; **Orta** aday ve doğrulanmamış kayıtları gizler; **Yüksek** yalnızca onaylı/doğrulanmış/denenmiş ve düşük/orta riskli kayıtları gösterir. Kullanıcı daha geniş görünüm seçtiğinde uyarılar yine görünür. Kaydın konusu tek başına silme veya gizleme gerekçesi değildir; risk ve hassasiyet bulguları uyarı olarak gösterilir ve hangi kayıtların listeleneceği kullanıcının görünürlük tercihidir. Bu seçim Vardiya izinlerini, uygulama kurallarını veya model sağlayıcılarının kurallarını değiştirmez.

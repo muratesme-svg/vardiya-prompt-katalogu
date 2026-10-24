@@ -28,6 +28,7 @@ SEED = ROOT / "seed_catalog.json"
 CANDIDATES = ROOT / "discovered_candidates.json"
 SOURCES = ROOT / "official_sources.json"
 CONTRIBUTIONS = ROOT / "contributions"
+VARIANTS = ROOT / "variants"
 OUT = ROOT
 MAX_SEARCH_REPOS = 20
 SEARCHES_PER_RUN = 3
@@ -559,6 +560,104 @@ def ratings_from_contributions(folder: Path = CONTRIBUTIONS) -> dict[str, dict]:
     return result
 
 
+# ---------------------------------------------------------------- community language variants (candidates)
+# The relay writes candidates as variants/<catalog-id>/<lang>/<contribution_key>.json. NOTHING is published
+# automatically: only entries listed in variants/approved.json (edited by the repository owner on GitHub) with the
+# exact text SHA-256 are put into the signed manifest. A candidate replaced after approval no longer matches the
+# approved hash and stays out until it is approved again. Ratings never decide publication.
+VARIANT_SCHEMA = "vardiya.prompt-variant"
+VARIANT_FIELDS = {"schema", "schema_version", "catalog_id", "source_sha256", "lang", "purpose", "kind", "text",
+                  "model", "edited_ratio", "license", "author", "contributor", "contribution_key", "created_month",
+                  "checks"}
+VARIANT_PURPOSES = {"sadik", "dogal", "resmi", "teknik", "sanatsal", "kendi"}
+RISK_KINDS = {"disari_gonderme", "gizli_bilgi_isteme", "silme", "sistem_uzaktan", "kural_asma", "gizli_karakter"}
+_VARIANT_SECRET = re.compile(
+    r"-----BEGIN [A-Z ]*PRIVATE KEY-----|\b(?:sk-(?:ant-|proj-)?[A-Za-z0-9_-]{16,}|github_pat_[A-Za-z0-9_]{20,}|"
+    r"gh[pousr]_[A-Za-z0-9]{20,}|AIza[0-9A-Za-z_-]{30,}|xox[abprs]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16}|"
+    r"hf_[A-Za-z0-9]{30,}|gsk_[A-Za-z0-9]{30,})|(?i:\b(?:api[_ -]?key|access[_ -]?token|token|secret|password|"
+    r"passwd|parola|şifre|sifre)\b\s*[:=]\s*[\"']?(?!\{)[^\s\"'{}]{6,})|\b[\w.+-]+@(?!example\.)[\w-]+(?:\.[\w-]+)+\b|"
+    r"(?<![\w\d])\+?\d[\d ()-]{8,}\d(?!\d)|(?i:(?:[a-z]:\\users\\|/home/|/users/)(?!\{)[^\\/\s\"']+)")
+
+
+def valid_variant(packet) -> dict | None:
+    """Strict check of one variant candidate (same rules as the app and the relay)."""
+    try:
+        if not isinstance(packet, dict) or set(packet) != VARIANT_FIELDS:
+            return None
+        if packet["schema"] != VARIANT_SCHEMA or packet["schema_version"] != 1:
+            return None
+        if not re.fullmatch(r"[0-9a-f]{32}", str(packet["contribution_key"])):
+            return None
+        if not re.fullmatch(r"[A-Za-z0-9._-]{1,200}", str(packet["catalog_id"])):
+            return None
+        if not re.fullmatch(r"[0-9a-f]{64}", str(packet["source_sha256"])) or \
+                not re.fullmatch(r"[a-z]{2}", str(packet["lang"])) or \
+                not re.fullmatch(r"\d{4}-\d{2}", str(packet["created_month"])):
+            return None
+        if packet["kind"] not in ("translation", "adaptation") or packet["purpose"] not in VARIANT_PURPOSES:
+            return None
+        text = packet["text"]
+        if not isinstance(text, str) or not text.strip() or len(text) > 20000 or _VARIANT_SECRET.search(text):
+            return None
+        ratio = packet["edited_ratio"]
+        if isinstance(ratio, bool) or not isinstance(ratio, (int, float)) or not 0 <= ratio <= 1:
+            return None
+        if not isinstance(packet["checks"], list) or any(c not in RISK_KINDS for c in packet["checks"]):
+            return None
+        for name, limit in (("model", 100), ("license", 100), ("author", 200)):
+            if not isinstance(packet[name], str) or len(packet[name]) > limit:
+                return None
+        who = packet["contributor"]
+        if who != {"type": "anonymous"} and not (
+                isinstance(who, dict) and set(who) == {"type", "display_name"} and who["type"] == "named"
+                and isinstance(who["display_name"], str) and 0 < len(who["display_name"].strip()) <= 60
+                and not _VARIANT_SECRET.search(who["display_name"])):
+            return None
+    except (KeyError, TypeError):
+        return None
+    return packet
+
+
+def approved_variants(folder: Path = VARIANTS) -> dict[str, list[dict]]:
+    """catalog id -> manifest `variants` (only owner-approved candidates whose text hash still matches)."""
+    approved_file = folder / "approved.json"
+    try:
+        approved = json.loads(approved_file.read_text(encoding="utf-8")).get("approved") or []
+    except (OSError, ValueError, AttributeError):
+        return {}
+    result: dict[str, list[dict]] = {}
+    seen = set()
+    for item in approved if isinstance(approved, list) else []:
+        if not isinstance(item, dict):
+            continue
+        rel = str(item.get("path") or "")
+        if not re.fullmatch(r"variants/[A-Za-z0-9._-]{1,200}/[a-z]{2}/[0-9a-f]{32}\.json", rel) or rel in seen:
+            continue
+        seen.add(rel)
+        try:
+            path = ROOT / rel
+            if path.stat().st_size > 64_000:
+                continue
+            packet = valid_variant(json.loads(path.read_text(encoding="utf-8")))
+        except (OSError, ValueError):
+            continue
+        if packet is None:
+            continue
+        digest = hashlib.sha256(packet["text"].encode("utf-8")).hexdigest()
+        if digest != str(item.get("sha256") or "") or rel.split("/")[1] != packet["catalog_id"] or \
+                rel.split("/")[2] != packet["lang"] or not rel.endswith(packet["contribution_key"] + ".json"):
+            continue
+        result.setdefault(packet["catalog_id"], []).append({
+            "id": packet["contribution_key"], "lang": packet["lang"], "kind": packet["kind"],
+            "purpose": packet["purpose"], "model": packet["model"], "edited_ratio": packet["edited_ratio"],
+            "contributor": packet["contributor"], "text": packet["text"], "sha256": digest,
+            "source_sha256": packet["source_sha256"], "review": "owner_approved",
+            "approved_at": str(item.get("approved_at") or "")[:30]})
+    for items in result.values():
+        items.sort(key=lambda v: (v["lang"], v["id"]))
+    return result
+
+
 def build(seed: dict, discovered: dict, run_number: int, private_key_b64: str) -> dict:
     # Preserve every seed record and append discoveries; content/risk classification never removes a record.
     records = list(seed.get("kayitlar") or [])
@@ -641,6 +740,10 @@ def build(seed: dict, discovered: dict, run_number: int, private_key_b64: str) -
     for entry in entries:
         if entry["id"] in community:
             entry["ratings"] = community[entry["id"]]
+    variants = approved_variants(VARIANTS)
+    for entry in entries:
+        if entry["id"] in variants and entry["redistribution"] == "full_text":
+            entry["variants"] = variants[entry["id"]]
     # Do not issue a new app-facing catalog version or force every device to fetch
     # the full bundle when the discovered prompt records have not changed.
     old_manifest = _existing_package_matches(entries)
