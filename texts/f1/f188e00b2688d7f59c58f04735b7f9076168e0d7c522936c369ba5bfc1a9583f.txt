@@ -1,0 +1,93 @@
+┌──────────────────────────────────┐
+         │            GOAL                   │
+         │   (user-defined objective)        │
+         └──────────────┬───────────────────┘
+                        ▼
+         ┌──────────────────────────────────┐
+         │  1. BRAINSTORM                    │
+         │  • Understand the goal            │
+         │  • Query RAG + web for context    │
+         │  • Explore approaches             │
+         │  • Design spec                    │
+         └──────────────┬───────────────────┘
+                        ▼
+         ┌──────────────────────────────────┐
+         │  2. PLAN                          │
+         │  • Task decomposition             │
+         │  • Architecture decisions         │
+         │  • Risk assessment                │
+         │  • Testing strategy               │
+         └──────────────┬───────────────────┘
+                        ▼
+         ┌──────────────────────────────────┐
+         │  3. EXECUTE (per task)            │
+         │  • Next pending task              │
+         │  • TDD: test → fail → implement   │
+         │  • Mark task done                 │
+         └──────────────┬───────────────────┘
+                        ▼
+                  All tasks done?
+                   /         \
+                 YES          NO
+                  │            │
+                  ▼            ▼
+           ┌──────────┐  ┌──────────────────┐
+           │ GOAL MET │  │  4. REVIEW-FIX    │
+           │  ✅      │  │  (autonomous)     │
+           └──────────┘  │  review → fix →   │
+                         │  verify → continue │
+                         └────────┬──────────┘
+                                  │
+                                  └──→ back to EXECUTE
+
+---
+
+TEST FAILURE
+    ↓
+REVIEW: find root cause (systematic-debugging iron law)
+    ↓
+FIX: apply minimal fix
+    ↓
+VERIFY: re-run tests
+    ↓
+    Pass? ── NO ──→ cycle count < 3? ── YES ──→ back to REVIEW
+    │                    │
+   YES                   NO
+    │                    │
+    ▼                    ▼
+CONTINUE            ESCALATE to user
+next task            "Unable to fix after 3 cycles"
+
+---
+
+[Goal] 🎯 <goal>
+
+[Goal] Phase 1: Brainstorm
+  (design...)
+✅ Approved.
+
+[Goal] Phase 2: Plan
+  6 tasks defined.
+✅ Confirmed.
+
+[Goal] Execute — Task 1/6: Create PaymentService
+  TDD: test → red → green ✅
+  Progress: 1/6
+
+[Goal] Execute — Task 2/6: Stripe integration
+  TDD: test → red → green ✅
+  Progress: 2/6
+
+[Goal] Execute — Task 3/6: Email notification
+  TDD: test → red → TEST FAILURE ❌
+
+[Goal] Review-Fix (autonomous)
+  Review: root cause — missing mail mock
+  Fix: added mock to conftest.py
+  Verify: re-run → PASS ✅
+  Continue: Task 3/6 complete. Moving to 4/6.
+
+...
+
+[Goal] 🎯 GOAL ACHIEVED — 6/6 tasks, all tests pass.
+[Goal] Cycles: 7/10

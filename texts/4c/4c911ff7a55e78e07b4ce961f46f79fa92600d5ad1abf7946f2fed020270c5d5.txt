@@ -1,0 +1,21 @@
+independence_declaration:
+  reviewer_backend: "<你的模型名称>"
+  author_backend: "<作者模型名称，如未知则标注 UNKNOWN>"
+  axis1_different_backend: true/false
+  axis2_context_isolated: true/false
+  independence_level: "<IND | SEMI | NON>"
+  degradation_notes: "<如有退化，说明原因>"
+  session_id: "<审查者会话标识，如无平台级 ID 则用模型名+开始时间>"
+  timestamp: "<ISO 8601>"
+
+---
+
+{
+  "metadata": {"title": "...", "date": "...", "model": "<你的模型>", "sop_version": "v2.0"},
+  "source_material": {"title": "...", "author_backend": "...", "version_binding": "..."},
+  "step1_fact_extraction": [{"text": "...", "confidence": "VERIFIED|CONSISTENT|PLAUSIBLE|UNVERIFIABLE", "type": "FACT|INFERENCE|ASSUMPTION|VALUE"}],
+  "step2_scoring": {"D1_logic": 0, "D2_accuracy": 0, "D3_method": 0, "D4_completeness": 0, "D5_clarity": 0, "D6_insight": 0, "composite_score": 0},
+  "step3_adversarial_challenge": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."},
+  "step4_final_judgment": {"verdict": "KEEP|MINOR|MAJOR|DISCARD", "composite_score": 0, "independence_declaration": {"reviewer_backend": "...", "author_backend": "...", "axis1_different_backend": true, "axis2_context_isolated": true, "independence_level": "IND|SEMI|NON", "degradation_notes": "...", "session_id": "...", "timestamp": "..."}},
+  "post_hoc_audit": {"items": {}, "conclusion": "PASS|CONDITIONAL_PASS|FAIL"}
+}

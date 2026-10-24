@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-10-24T16:56:25+00:00",
+  "checked_at": "2026-10-24T21:07:36+00:00",
   "errors": [],
   "queries": [
-    "system prompts language:Markdown",
     "AI agent prompts language:Markdown",
-    "awesome prompts language:Markdown"
+    "awesome prompts language:Markdown",
+    "prompt templates language:Markdown"
   ],
-  "records_updated": 3,
-  "repositories_found": 2,
-  "repositories_scanned": 2,
+  "records_updated": 8,
+  "repositories_found": 4,
+  "repositories_scanned": 4,
   "truncated_repositories": []
 }

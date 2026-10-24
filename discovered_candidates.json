@@ -147,6 +147,296 @@
       "Tam metin otomatik yayımlanmadı; kaynağı açıp incele."
     ]
   },
+  "discovered-7c33cf01575abe910da6f087": {
+    "aciklama": "nunocodex/pi-agent-enterprise deposundaki agent/prompts/goal.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from nunocodex/pi-agent-enterprise/agent/prompts/goal.md. Check the source and redistribution status.",
+    "ad": "Goal",
+    "categories": [
+      "genel",
+      "kod",
+      "inceleme",
+      "yazi",
+      "veri",
+      "gorsel",
+      "ajan"
+    ],
+    "description": "nunocodex/pi-agent-enterprise deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "kod",
+    "kaynak": {
+      "adres": "https://github.com/nunocodex/pi-agent-enterprise/blob/main/agent/prompts/goal.md",
+      "depo": "nunocodex/pi-agent-enterprise",
+      "lisans": "MIT",
+      "tarih": "2026-07-01",
+      "yazar": "nunocodex",
+      "yol": "agent/prompts/goal.md"
+    },
+    "kaynak_adi": "nunocodex",
+    "kimlik": "discovered-7c33cf01575abe910da6f087",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "┌──────────────────────────────────┐\n         │            GOAL                   │\n         │   (user-defined objective)        │\n         └──────────────┬───────────────────┘\n                        ▼\n         ┌──────────────────────────────────┐\n         │  1. BRAINSTORM                    │\n         │  • Understand the goal            │\n         │  • Query RAG + web for context    │\n         │  • Explore approaches             │\n         │  • Design spec                    │\n         └──────────────┬───────────────────┘\n                        ▼\n         ┌──────────────────────────────────┐\n         │  2. PLAN                          │\n         │  • Task decomposition             │\n         │  • Architecture decisions         │\n         │  • Risk assessment                │\n         │  • Testing strategy               │\n         └──────────────┬───────────────────┘\n                        ▼\n         ┌──────────────────────────────────┐\n         │  3. EXECUTE (per task)            │\n         │  • Next pending task              │\n         │  • TDD: test → fail → implement   │\n         │  • Mark task done                 │\n         └──────────────┬───────────────────┘\n                        ▼\n                  All tasks done?\n                   /         \\\n                 YES          NO\n                  │            │\n                  ▼            ▼\n           ┌──────────┐  ┌──────────────────┐\n           │ GOAL MET │  │  4. REVIEW-FIX    │\n           │  ✅      │  │  (autonomous)     │\n           └──────────┘  │  review → fix →   │\n                         │  verify → continue │\n                         └────────┬──────────┘\n                                  │\n                                  └──→ back to EXECUTE\n\n---\n\nTEST FAILURE\n    ↓\nREVIEW: find root cause (systematic-debugging iron law)\n    ↓\nFIX: apply minimal fix\n    ↓\nVERIFY: re-run tests\n    ↓\n    Pass? ── NO ──→ cycle count < 3? ── YES ──→ back to REVIEW\n    │                    │\n   YES                   NO\n    │                    │\n    ▼                    ▼\nCONTINUE            ESCALATE to user\nnext task            \"Unable to fix after 3 cycles\"\n\n---\n\n[Goal] 🎯 <goal>\n\n[Goal] Phase 1: Brainstorm\n  (design...)\n✅ Approved.\n\n[Goal] Phase 2: Plan\n  6 tasks defined.\n✅ Confirmed.\n\n[Goal] Execute — Task 1/6: Create PaymentService\n  TDD: test → red → green ✅\n  Progress: 1/6\n\n[Goal] Execute — Task 2/6: Stripe integration\n  TDD: test → red → green ✅\n  Progress: 2/6\n\n[Goal] Execute — Task 3/6: Email notification\n  TDD: test → red → TEST FAILURE ❌\n\n[Goal] Review-Fix (autonomous)\n  Review: root cause — missing mail mock\n  Fix: added mock to conftest.py\n  Verify: re-run → PASS ✅\n  Continue: Task 3/6 complete. Moving to 4/6.\n\n...\n\n[Goal] 🎯 GOAL ACHIEVED — 6/6 tasks, all tests pass.\n[Goal] Cycles: 7/10",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-01",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "full_text",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [],
+    "task_types": [
+      "genel",
+      "kod",
+      "inceleme",
+      "yazi",
+      "veri",
+      "gorsel",
+      "ajan"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": []
+  },
+  "discovered-9ba3efc17985ad279a7d266b": {
+    "aciklama": "ntguion/cursor_agentic_team deposundaki .cursor/commands/scout.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from ntguion/cursor_agentic_team/.cursor/commands/scout.md. Check the source and redistribution status.",
+    "ad": "Scout",
+    "categories": [
+      "genel",
+      "arastirma",
+      "ogrenme",
+      "veri"
+    ],
+    "description": "ntguion/cursor_agentic_team deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "arastirma",
+    "kaynak": {
+      "adres": "https://github.com/ntguion/cursor_agentic_team/blob/main/.cursor/commands/scout.md",
+      "depo": "ntguion/cursor_agentic_team",
+      "lisans": "MIT",
+      "tarih": "2026-07-09",
+      "yazar": "ntguion",
+      "yol": ".cursor/commands/scout.md"
+    },
+    "kaynak_adi": "ntguion",
+    "kimlik": "discovered-9ba3efc17985ad279a7d266b",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-09",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "arastirma",
+      "ogrenme",
+      "veri"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Dosya prompt benzeri göründü ancak çıkarılabilir bir prompt bölümü bulunamadı."
+    ]
+  },
+  "discovered-bcc78930e7a562c2ab62f2fd": {
+    "aciklama": "redamancy231-create/independent-review-toolkit deposundaki prompts/adversarial.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from redamancy231-create/independent-review-toolkit/prompts/adversarial.md. Check the source and redistribution status.",
+    "ad": "Adversarial",
+    "categories": [
+      "genel",
+      "inceleme"
+    ],
+    "description": "redamancy231-create/independent-review-toolkit deposundan otomatik keşfedilen kayıt.",
+    "dil": "zh",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "inceleme",
+    "kaynak": {
+      "adres": "https://github.com/redamancy231-create/independent-review-toolkit/blob/master/prompts/adversarial.md",
+      "depo": "redamancy231-create/independent-review-toolkit",
+      "lisans": "CC BY 4.0",
+      "tarih": "2026-07-24",
+      "yazar": "redamancy231-create",
+      "yol": "prompts/adversarial.md"
+    },
+    "kaynak_adi": "redamancy231-create",
+    "kimlik": "discovered-bcc78930e7a562c2ab62f2fd",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-24",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "inceleme"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Dosya prompt benzeri göründü ancak çıkarılabilir bir prompt bölümü bulunamadı."
+    ]
+  },
+  "discovered-cca3cc4dfc347ed238e74317": {
+    "aciklama": "nunocodex/pi-agent-enterprise deposundaki agent/prompts/fix.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from nunocodex/pi-agent-enterprise/agent/prompts/fix.md. Check the source and redistribution status.",
+    "ad": "Fix",
+    "categories": [
+      "genel",
+      "kod",
+      "inceleme",
+      "arastirma",
+      "yazi",
+      "veri",
+      "gorsel",
+      "ajan"
+    ],
+    "description": "nunocodex/pi-agent-enterprise deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "kod",
+    "kaynak": {
+      "adres": "https://github.com/nunocodex/pi-agent-enterprise/blob/main/agent/prompts/fix.md",
+      "depo": "nunocodex/pi-agent-enterprise",
+      "lisans": "MIT",
+      "tarih": "2026-07-01",
+      "yazar": "nunocodex",
+      "yol": "agent/prompts/fix.md"
+    },
+    "kaynak_adi": "nunocodex",
+    "kimlik": "discovered-cca3cc4dfc347ed238e74317",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "## Workflow Pipeline\nbrainstorm → plan → execute → test → commit\n    ↑                           ↓\n    │                      review → FIX\n    │                           ↓\n    └─────────────── (sessione pi.dev) ─┘\n\n---\n\n┌─────────────────────────────────────────┐\n│          FIX LOOP (max N cycles)         │\n│                                         │\n│  1. RUN TESTS                           │\n│     ↓                                   │\n│  2. All pass? ── YES ──→ EXIT ✅        │\n│     ↓ NO                                │\n│  3. REVIEW FAILURES                     │\n│     ↓                                   │\n│  4. FIND ROOT CAUSE                     │\n│     ↓                                   │\n│  5. APPLY MINIMAL FIX                   │\n│     ↓                                   │\n│  6. VERIFY FIX                          │\n│     ↓                                   │\n│  7. Cycle count < max? ── YES ──→ (1)  │\n│     ↓ NO                                │\n│  8. Report remaining failures           │\n│     EXIT ❌                              │\n└─────────────────────────────────────────┘\n\n---\n\n[Fix] Cycle 1/5 — 3 failures detected\n[Fix]   1. validate_settings.sh: defaultThinkingLevel mismatch (high vs xhigh)\n[Fix]   2. validate_ci_workflow.sh: Missing trigger specification\n[Fix]   3. test_ci_locally.sh: Stage 7 GPG: unsigned commits\n\n---\n\n[Fix] Cycle 2/5 — fixing issue #2\n[Fix]   Root cause: settings.json defaultThinkingLevel was \"high\" — \n        GUIDE.md documents \"xhigh\" and validate_settings.sh enforces it.\n[Fix]   Fix: Changed \"high\" → \"xhigh\" in agent/settings.json:8\n[Fix]   Verify: validate_settings.sh — PASS ✅ (9/9)\n[Fix]   1 issue fixed, 2 remaining\n\n---\n\n[Fix] Target: tests/\n[Fix] Max cycles: 5\n\n[Fix] Cycle 1/5 — Running all tests...\n   validate_gitignore.sh:    20/20 ✅\n   validate_settings.sh:      8/9  ❌ (1 failed)\n   validate_prompts.sh:      77/77 ✅\n   validate_ci_workflow.sh:  19/19 ✅\n   test_ci_locally.sh:        9/10 ✅ (1 skipped)\n[Fix] 1 failure detected.\n\n[Fix] Cycle 1/5 — fixing 1 issue\n[Fix]   Root cause: (explanation)\n[Fix]   Fix: (what was changed)\n[Fix]   Verify: (test name) — PASS ✅\n[Fix] Cycle 1 complete: 1 fixed, 0 remaining.\n\n[Fix] All tests pass. ✅\n[Fix] Summary: 1 failure resolved in 1 cycle.\n[Fix] Full suite: 134/134 passed.",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-01",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "full_text",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [],
+    "task_types": [
+      "genel",
+      "kod",
+      "inceleme",
+      "arastirma",
+      "yazi",
+      "veri",
+      "gorsel",
+      "ajan"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": []
+  },
   "discovered-dc8bdc8e28e761af660eeab9": {
     "aciklama": "magiruuvelvet/llm-prompts deposundaki tools/claude-prompt-engineer.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
     "aciklama_en": "Discovered from magiruuvelvet/llm-prompts/tools/claude-prompt-engineer.md. Check the source and redistribution status.",
@@ -223,5 +513,153 @@
     "warnings": [
       "Tam metin otomatik yayımlanmadı; kaynağı açıp incele."
     ]
+  },
+  "discovered-e24f521896d1785d930ce896": {
+    "aciklama": "ntguion/cursor_agentic_team deposundaki .cursor/commands/critic.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from ntguion/cursor_agentic_team/.cursor/commands/critic.md. Check the source and redistribution status.",
+    "ad": "Critic",
+    "categories": [
+      "genel",
+      "inceleme",
+      "ozet",
+      "yazi",
+      "veri",
+      "gorsel",
+      "yaratici"
+    ],
+    "description": "ntguion/cursor_agentic_team deposundan otomatik keşfedilen kayıt.",
+    "dil": "en",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "inceleme",
+    "kaynak": {
+      "adres": "https://github.com/ntguion/cursor_agentic_team/blob/main/.cursor/commands/critic.md",
+      "depo": "ntguion/cursor_agentic_team",
+      "lisans": "MIT",
+      "tarih": "2026-07-09",
+      "yazar": "ntguion",
+      "yol": ".cursor/commands/critic.md"
+    },
+    "kaynak_adi": "ntguion",
+    "kimlik": "discovered-e24f521896d1785d930ce896",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-09",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "link_only",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [
+      "rights_or_extraction_unverified"
+    ],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [
+      "rights_or_extraction_unverified"
+    ],
+    "task_types": [
+      "genel",
+      "inceleme",
+      "ozet",
+      "yazi",
+      "veri",
+      "gorsel",
+      "yaratici"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": [
+      "Dosya prompt benzeri göründü ancak çıkarılabilir bir prompt bölümü bulunamadı."
+    ]
+  },
+  "discovered-f625a412096c5e802f58f291": {
+    "aciklama": "redamancy231-create/independent-review-toolkit deposundaki prompts/full-review.md kaydından keşfedildi. Kaynak ve lisans ayrıntısını incele.",
+    "aciklama_en": "Discovered from redamancy231-create/independent-review-toolkit/prompts/full-review.md. Check the source and redistribution status.",
+    "ad": "Full Review",
+    "categories": [
+      "genel",
+      "inceleme",
+      "arastirma",
+      "ozet",
+      "veri"
+    ],
+    "description": "redamancy231-create/independent-review-toolkit deposundan otomatik keşfedilen kayıt.",
+    "dil": "zh",
+    "dil_inceleme": "language_guess",
+    "evidence": {
+      "kind": "source_only",
+      "rated_tasks": 0
+    },
+    "guven": "topluluk",
+    "kategori": "inceleme",
+    "kaynak": {
+      "adres": "https://github.com/redamancy231-create/independent-review-toolkit/blob/master/prompts/full-review.md",
+      "depo": "redamancy231-create/independent-review-toolkit",
+      "lisans": "CC BY 4.0",
+      "tarih": "2026-07-24",
+      "yazar": "redamancy231-create",
+      "yol": "prompts/full-review.md"
+    },
+    "kaynak_adi": "redamancy231-create",
+    "kimlik": "discovered-f625a412096c5e802f58f291",
+    "limitations": [
+      "Otomatik sınıflandırma; uzman incelemesi değildir."
+    ],
+    "metin": "independence_declaration:\n  reviewer_backend: \"<你的模型名称>\"\n  author_backend: \"<作者模型名称，如未知则标注 UNKNOWN>\"\n  axis1_different_backend: true/false\n  axis2_context_isolated: true/false\n  independence_level: \"<IND | SEMI | NON>\"\n  degradation_notes: \"<如有退化，说明原因>\"\n  session_id: \"<审查者会话标识，如无平台级 ID 则用模型名+开始时间>\"\n  timestamp: \"<ISO 8601>\"\n\n---\n\n{\n  \"metadata\": {\"title\": \"...\", \"date\": \"...\", \"model\": \"<你的模型>\", \"sop_version\": \"v2.0\"},\n  \"source_material\": {\"title\": \"...\", \"author_backend\": \"...\", \"version_binding\": \"...\"},\n  \"step1_fact_extraction\": [{\"text\": \"...\", \"confidence\": \"VERIFIED|CONSISTENT|PLAUSIBLE|UNVERIFIABLE\", \"type\": \"FACT|INFERENCE|ASSUMPTION|VALUE\"}],\n  \"step2_scoring\": {\"D1_logic\": 0, \"D2_accuracy\": 0, \"D3_method\": 0, \"D4_completeness\": 0, \"D5_clarity\": 0, \"D6_insight\": 0, \"composite_score\": 0},\n  \"step3_adversarial_challenge\": {\"A\": \"...\", \"B\": \"...\", \"C\": \"...\", \"D\": \"...\", \"E\": \"...\"},\n  \"step4_final_judgment\": {\"verdict\": \"KEEP|MINOR|MAJOR|DISCARD\", \"composite_score\": 0, \"independence_declaration\": {\"reviewer_backend\": \"...\", \"author_backend\": \"...\", \"axis1_different_backend\": true, \"axis2_context_isolated\": true, \"independence_level\": \"IND|SEMI|NON\", \"degradation_notes\": \"...\", \"session_id\": \"...\", \"timestamp\": \"...\"}},\n  \"post_hoc_audit\": {\"items\": {}, \"conclusion\": \"PASS|CONDITIONAL_PASS|FAIL\"}\n}",
+    "model": "genel",
+    "model_families": [
+      "genel"
+    ],
+    "model_fit": [
+      {
+        "basis": "repository_metadata",
+        "checked_at": "2026-07-24",
+        "family": "genel",
+        "model_id": null,
+        "model_version": null,
+        "provider": "any",
+        "tested": false
+      }
+    ],
+    "redistribution": "full_text",
+    "review_status": "candidate",
+    "risk_level": "unknown",
+    "risk_tags": [],
+    "sensitivity": "none",
+    "tags": [
+      "otomatik-kesif",
+      "aday"
+    ],
+    "tarama": [],
+    "task_types": [
+      "genel",
+      "inceleme",
+      "arastirma",
+      "ozet",
+      "veri"
+    ],
+    "usage_notes": "Otomatik keşif; modelde denenmiş ya da içerikçe onaylanmış olduğu anlamına gelmez.",
+    "warnings": []
   }
 }
