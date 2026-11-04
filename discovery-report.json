@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-03T12:06:36+00:00",
+  "checked_at": "2026-11-04T12:19:52+00:00",
   "errors": [],
   "queries": [
-    "промпты шаблоны language:Markdown",
     "プロンプト テンプレート language:Markdown",
-    "프롬프트 템플릿 language:Markdown"
+    "프롬프트 템플릿 language:Markdown",
+    "prompt e modelli language:Markdown"
   ],
   "records_updated": 0,
   "repositories_found": 0,
