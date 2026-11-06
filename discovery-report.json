@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-05T12:34:10+00:00",
+  "checked_at": "2026-11-06T12:17:26+00:00",
   "errors": [],
   "queries": [
-    "프롬프트 템플릿 language:Markdown",
     "prompt e modelli language:Markdown",
-    "prompt sjablonen language:Markdown"
+    "prompt sjablonen language:Markdown",
+    "prompt engineering language:Markdown"
   ],
-  "records_updated": 0,
-  "repositories_found": 0,
-  "repositories_scanned": 0,
+  "records_updated": 2,
+  "repositories_found": 1,
+  "repositories_scanned": 1,
   "truncated_repositories": []
 }

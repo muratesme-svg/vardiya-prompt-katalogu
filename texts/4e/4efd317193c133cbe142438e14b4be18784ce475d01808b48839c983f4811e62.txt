@@ -1,0 +1,30 @@
+你是翻译者。将以下文件从简体中文翻译为美式英语 (American English)，写入 `en/` 目录。
+
+## 强制术语表
+controlled experiment=对照实验 | prompt engineering=prompt工程 | methodology casebook=方法论案例手册 | SOP=标准操作程序 | Tier 0/1=层级0/1 | engineering gate=工程门 | science gate=科学门 | pre-registration lock=预注册锁 | INVENTORY equivalence=INVENTORY等价 | ceiling effect=天花板效应 | blind scoring=盲评 | dual-LLM cross-backend=双LLM异后端 | inter-rater reliability=评分者一致性 | construct validity=构造效度 | effect size=效应量 | statistical power=统计功效 | negative result=阴性结果 | autopsy=尸检 | retrospective=复盘 | methodology fragment=方法论片段 | cross-model replication=跨模型复现 | adversarial validation=对抗验证 | missing pattern=缺失模式
+
+## 翻译规则
+- 美式拼写
+- 技术文档语气
+- 保留所有 YAML/JSON/Mermaid/代码块原样
+- 保留 Markdown 链接路径不变
+- 保留 CSV 数据文件内容不变
+- 不要增删内容
+- 保留 `[Sp]` `[E]` `[E-]` `[F·1域]` `[IND]` 等标签原样
+
+## 文件清单
+1. README.md → en/README.md
+2. sop.md → en/sop.md
+3. methodology/lessons-learned.md → en/methodology/lessons-learned.md
+4. methodology/glossary.md → en/methodology/glossary.md
+5. methodology/checklists.md → en/methodology/checklists.md
+6. examples/a2-prep-exec-post/README.md → en/examples/a2-prep-exec-post/README.md
+7. examples/a3-action-routing/README.md → en/examples/a3-action-routing/README.md
+8. appendix/a1-summary.md → en/appendix/a1-summary.md
+9. schema/README.md → en/schema/README.md
+
+## 步骤
+1. 读取每个源文件
+2. 翻译为美式英语
+3. 写入 en/ 对应路径（先创建目录）
+4. 完成后列出翻译的文件
