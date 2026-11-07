@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-06T12:17:26+00:00",
+  "checked_at": "2026-11-07T11:12:23+00:00",
   "errors": [],
   "queries": [
-    "prompt e modelli language:Markdown",
     "prompt sjablonen language:Markdown",
-    "prompt engineering language:Markdown"
+    "prompt engineering language:Markdown",
+    "LLM prompt library language:Markdown"
   ],
   "records_updated": 2,
   "repositories_found": 1,
