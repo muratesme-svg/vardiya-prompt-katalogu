@@ -600,7 +600,7 @@
       "adres": "https://github.com/magiruuvelvet/llm-prompts/blob/master/tools/claude-prompt-engineer.md",
       "depo": "magiruuvelvet/llm-prompts",
       "lisans": "bilinmiyor",
-      "tarih": "2026-09-30",
+      "tarih": "2026-10-28",
       "yazar": "magiruuvelvet",
       "yol": "tools/claude-prompt-engineer.md"
     },
@@ -617,7 +617,7 @@
     "model_fit": [
       {
         "basis": "repository_metadata",
-        "checked_at": "2026-09-30",
+        "checked_at": "2026-10-28",
         "family": "claude",
         "model_id": null,
         "model_version": null,
