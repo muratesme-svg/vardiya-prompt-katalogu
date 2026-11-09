@@ -90,7 +90,7 @@
       "adres": "https://github.com/alexey-max-fedorov/gaia-ai/blob/master/prompts/update.md",
       "depo": "alexey-max-fedorov/gaia-ai",
       "lisans": "bilinmiyor",
-      "tarih": "2026-10-22",
+      "tarih": "2026-11-07",
       "yazar": "alexey-max-fedorov",
       "yol": "prompts/update.md"
     },
@@ -107,7 +107,7 @@
     "model_fit": [
       {
         "basis": "repository_metadata",
-        "checked_at": "2026-10-22",
+        "checked_at": "2026-11-07",
         "family": "genel",
         "model_id": null,
         "model_version": null,
@@ -164,7 +164,7 @@
       "adres": "https://github.com/alexey-max-fedorov/gaia-ai/blob/master/prompts/doctor.md",
       "depo": "alexey-max-fedorov/gaia-ai",
       "lisans": "bilinmiyor",
-      "tarih": "2026-10-22",
+      "tarih": "2026-11-07",
       "yazar": "alexey-max-fedorov",
       "yol": "prompts/doctor.md"
     },
@@ -181,7 +181,7 @@
     "model_fit": [
       {
         "basis": "repository_metadata",
-        "checked_at": "2026-10-22",
+        "checked_at": "2026-11-07",
         "family": "genel",
         "model_id": null,
         "model_version": null,

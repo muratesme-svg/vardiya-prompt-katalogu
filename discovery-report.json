@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-08T11:23:42+00:00",
+  "checked_at": "2026-11-09T13:06:16+00:00",
   "errors": [],
   "queries": [
-    "prompt engineering language:Markdown",
     "LLM prompt library language:Markdown",
-    "system prompts language:Markdown"
+    "system prompts language:Markdown",
+    "AI agent prompts language:Markdown"
   ],
   "records_updated": 3,
   "repositories_found": 2,
