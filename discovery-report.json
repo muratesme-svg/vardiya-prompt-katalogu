@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-11T11:58:27+00:00",
+  "checked_at": "2026-11-12T12:59:09+00:00",
   "errors": [],
   "queries": [
-    "AI agent prompts language:Markdown",
     "awesome prompts language:Markdown",
-    "prompt templates language:Markdown"
+    "prompt templates language:Markdown",
+    "yapay zeka prompt şablonları language:Markdown"
   ],
-  "records_updated": 8,
-  "repositories_found": 4,
-  "repositories_scanned": 4,
+  "records_updated": 6,
+  "repositories_found": 3,
+  "repositories_scanned": 3,
   "truncated_repositories": []
 }
