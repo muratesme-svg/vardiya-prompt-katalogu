@@ -1,13 +1,13 @@
 {
-  "checked_at": "2026-11-13T12:24:46+00:00",
+  "checked_at": "2026-11-14T11:37:56+00:00",
   "errors": [],
   "queries": [
-    "prompt templates language:Markdown",
     "yapay zeka prompt şablonları language:Markdown",
-    "KI Prompt Vorlagen language:Markdown"
+    "KI Prompt Vorlagen language:Markdown",
+    "modèles de prompts IA language:Markdown"
   ],
-  "records_updated": 6,
-  "repositories_found": 3,
-  "repositories_scanned": 3,
+  "records_updated": 0,
+  "repositories_found": 0,
+  "repositories_scanned": 0,
   "truncated_repositories": []
 }
