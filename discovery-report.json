@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-20T13:16:05+00:00",
+  "checked_at": "2026-11-21T12:50:41+00:00",
   "errors": [],
   "queries": [
-    "قوالب مطالبات الذكاء الاصطناعي language:Markdown",
     "промпты шаблоны language:Markdown",
-    "プロンプト テンプレート language:Markdown"
+    "プロンプト テンプレート language:Markdown",
+    "프롬프트 템플릿 language:Markdown"
   ],
   "records_updated": 0,
   "repositories_found": 0,
